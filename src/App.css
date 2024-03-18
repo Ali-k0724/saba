@@ -1,0 +1,62 @@
+.line::after {
+  border: 1px solid #b7c9cc;
+  border-width: 0 0 1px 1px;
+  background-color: red;
+}
+
+input[type="text"]:focus ~ .input-text,
+input[type="text"]:not(:placeholder-shown) ~ .input-text {
+  @apply text-blue-500 transform -translate-y-11 -translate-x-1 scale-75 bg-white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fadeInRight {
+  animation: fadeInRight 0.5s ease-in-out;
+}
+.fadeInLeft {
+  animation: fadeInLeft 0.5s ease-in-out;
+}
+.fadeInDown {
+  animation: fadeInDown 0.5s ease-in-out;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.event {
+  transition-delay: 700ms;
+}
+.new-event {
+  transition-delay: 1000ms;
+}
